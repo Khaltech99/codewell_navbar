@@ -1,0 +1,308 @@
+:root {
+    --color-body: #f3ede5;
+    --color-gray: #807f7e;
+    --color-black: #000;
+    --color-yellow: #f7b300;
+    --color-green: #133416;
+    --color-try: #fff;
+}
+
+html {
+    font-family: 'Inter', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-gray);
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    padding: 1rem;
+    margin: 0;
+    color: var(--color-gray);
+    background-color: var(--color-body);
+    font-weight: 500;
+}
+
+
+/* NAVBAR  */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    align-items: center;
+    font-weight: 500;
+}
+
+.nav-list {
+    display: none;
+    cursor: pointer;
+}
+
+.list-item {
+    margin-right: 20px;
+}
+
+
+/* .hide {
+    display: none;
+} */
+
+.navReg {
+    display: none;
+}
+
+.navReg-sign {
+    margin-right: 10px;
+}
+
+@media screen and (min-width:768px) {
+    .hide {
+        display: block;
+    }
+    .hide-icon {
+        display: none;
+    }
+    .navReg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    body {
+        padding: 3rem 8rem;
+    }
+    .nav-list {
+        display: flex;
+        cursor: pointer;
+    }
+}
+
+
+/* BTN */
+
+.btn {
+    padding: 1rem 1.5rem;
+    color: var(--color-try);
+    background: var(--color-green);
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+/* DROPDOWN  */
+
+.product {
+    position: relative;
+}
+
+.subUl {
+    background-color: var(--color-try);
+    box-shadow: 0 0 1px 0;
+    padding: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    position: absolute;
+    border-radius: 20px;
+    top: 25px;
+    right: -200px;
+    background-color: var(--color-try);
+}
+
+.wrap {
+    color: var(--color-black);
+    font-weight: 500;
+}
+
+.sublist {
+    margin-bottom: .5rem;
+}
+
+.list-image {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.nav-text {
+    margin: 0;
+    margin-left: 35px;
+}
+
+
+/* where to tackle desktop dropdown */
+
+.dropdownhide {
+    display: none;
+}
+
+@media screen and (min-width:768px) {
+    /* .subUl {
+        display: flex;
+    } */
+}
+
+.nav-menu {
+    position: relative;
+}
+
+
+/* DROP HEADING (SIDE) */
+
+.drop-heading {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    color: var(--color-gray);
+}
+
+
+/* where to tackle drop side   */
+
+.dropside {
+    display: none;
+    justify-content: center;
+    position: relative;
+    top: 1px;
+    right: .5px;
+    width: 100%;
+}
+
+.side {
+    display: block;
+}
+
+@media screen and (min-width:768px) {
+    .side {
+        display: none;
+    }
+}
+
+.close {
+    width: 30px;
+    align-self: flex-end;
+}
+
+
+/* CONTENT SEGMENT  */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.emphasy {
+    color: var(--color-yellow);
+}
+
+.ondeck {
+    color: var(--color-black);
+}
+
+.part1 {
+    margin-top: 2rem;
+    padding-right: 70px;
+}
+
+.review {
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.part1text {
+    margin-bottom: 2rem;
+}
+
+.review-image {
+    margin-left: 1rem;
+    vertical-align: middle;
+}
+
+.flex-image {
+    display: none;
+}
+
+.part2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.brands {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px;
+}
+
+.part2text {
+    margin-left: 1rem;
+}
+
+.part1heading {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+@media screen and (min-width:768px) {
+    .content {
+        margin-top: 5rem;
+    }
+    .part1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 75%;
+    }
+    .flex {
+        display: flex;
+        gap: 4rem;
+        width: 100%;
+    }
+    .flex-image {
+        display: block;
+        width: 25%;
+    }
+    .part1heading {
+        font-size: 3rem;
+    }
+    .brands {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .part2 {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.dropdownhide {
+    animation-duration: 1s;
+    animation-name: slidedown;
+}
+
+.dropside {
+    animation-duration: 1s;
+    animation-name: slidedown;
+}
+
+@keyframes slidedown {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
